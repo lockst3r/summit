@@ -1,21 +1,18 @@
-*{
-box-sizing: border box;
+* {
+  box-sizing: border-box;
 }
-
-h1{
-text-align: center;
+h1  {
+text-align: center; 
 }
-
-.articles-list{
-display: flex;
-flex-wrap: wrap;
-}
-
 .article {
-padding: 16px;
-margin: 8px;
-background-color: bisque;
-flex-shrink:0;
-flex-grow:1;
-flex-basis: 300px;
+ flex-basis: 300px;
+ flex-grow: 1;
+ flex-shrink: 0;
+ padding: 16px;
+ margin: 8px;
+ background-color: bisque;   
+}
+.articles-list {
+  display: flex;
+  flex-wrap: wrap;
 }
