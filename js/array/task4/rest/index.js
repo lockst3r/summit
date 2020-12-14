@@ -24,7 +24,15 @@ const multiply = (...args) => {
 return args.reduce((acc, el) => acc + el);
 }
 
+console.log(multiply(5));
+console.log(multiply(3, 5, 10));
 
-multiply(5);
+
+//spread
+const testaRR = [6, 7, 6, 9, 0];
+console.log(...testaRR);
+
+const  testArrCopy = [...testaRR];
+
 
 
