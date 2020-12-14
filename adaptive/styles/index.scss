@@ -1,0 +1,13 @@
+@import 'navigation.scss';
+@import 'products.scss';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f6f6f6;
+  margin: 0 auto;
+  width: 95%;
+  font-family: 'Karla', sans-serif;
+}
