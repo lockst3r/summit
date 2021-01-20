@@ -1,58 +1,47 @@
-"use strick";
-
-//1. learn requirement
-//2. Create step by step
-//3. Write fraft solution & testing
-//4. Refactoring final testing
-
-//function printMessage(country, city) {
-//  console.log(
-//    `Hello, ${this.firstName}. My age is ${this.age}. I am from ${country}, ${city}`
-//  );
-//}
-
-// const user = {
-//  firstName: "Andrey",
-//  age: 113,
-//};
-
-//const printMessageBinded = printMessage.bind(user, 'Germany', 'Berlin');
-//printMessageBinded();
-
-// printMessage("Ukraine", "Kyiv");
-
-//const printMessageBinded = printMessage.bind(user, 'Germany');
-// printMessage('Berlin');
-//printMessageBinded();
-
-//printMessage.bind(user)('Germeny', 'Berlin');
-
-// option 1
-/* function bind(func, context, ...args) {
-  return func.bind(context, ...args);
+class Sportsman {
+  constructor(name) {
+    this.name = name;
+  }
+  run() {
+    console.log(`${this.name} is running`);
+  }
 }
 
-bind(printMessage, user);
+class Swimmer extends Sportsman {
+  constructor(name, swimmingStyle) {
+    //  can use context 1
+    super(name);
+    this.swimmingStyle = swimmingStyle;
+  }
 
-function bind(func, context, ...args) {
-  return func.bind(context, ...args);
+  swim() {
+    console.log(`${this.name} is swimming ${this.swimmingStyle}`);
+  }
 }
 
-bind(printMessage, user); */
-// option 2
-function bind(func, context, ...args) {
-  return function (...rest) {
-    return func.call(context, ...args, ...rest);
-  };
+/* const obj ={
+  name: 'Test',
+  run(){
+  console.log('test');
+  }
+  } */
+
+/* const sportsman = new Sportsman("dens");
+const swimmer = new Swimming("user", "somestyle"); */
+
+//  can no use context 1
+// super (name);
+
+/*  // lose context 2
+console.log('Static Call');
+Swimmer.swim()
+ */
+// const swomFunc = swimmer.swim;
+// swomFunc();
+// example 4
+/* function testFunc() {
+  setInterval(() => this.swim, 1000);
 }
-/* // option 3
 
-function myBind(func, context, ...args) {
-return function() {
-  const contextCopy = {...context};
-contextCopy.tempFunc = func;
-contextCopy.tempFunc(...args, ...params);
-}
-} */
-
-
+testFunc.apply(Swimmer);
+ */
